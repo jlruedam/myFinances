@@ -1,15 +1,33 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static './logBook/css/normalize.css'%}">
+    <link rel="stylesheet" href="{% static './logBook/css/style.css'%}">
     <title>Document</title>
 </head>
 <body>
-    <h1>Este es el Index</h1>
-
-    <p>Inician el proyecto MyFinances</p>
-    
+   <header>
+        <h1>Finanzas Personales</h1>
+   </header>
+   <main class="main-container">
+       <nav class="navBar">
+           <ul class="navBar__list">
+               <li class="navBar__item"><a class="navBar__link" href="#">Bitácora</a></li>
+               <li class="navBar__item"><a class="navBar__link" href="#">Deudas</a></li>
+               <li class="navBar__item"><a class="navBar__link" href="#">Ahorros</a></li>
+               <li class="navBar__item"><a class="navBar__link" href="#">Presupuesto</a></li>
+               <li class="navBar__item"><a class="navBar__link" href="#">Informes</a></li>
+               <li class="navBar__item"><a class="navBar__link" href="#">Simulador de Gatos</a></li>
+           </ul>
+       </nav>
+   </main>
+   <footer>
+        <h2>Every day counts</h2>
+   </footer>   
 </body>
 </html>
