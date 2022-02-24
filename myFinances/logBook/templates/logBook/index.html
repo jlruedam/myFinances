@@ -11,22 +11,85 @@
     <title>Document</title>
 </head>
 <body>
-   <header>
-        <h1>Finanzas Personales</h1>
+   <header class="header-container">
+        
+        <div class="header-container__title">
+            <h1>Finanzas Personales</h1>
+        </div>
+        <nav class="navBar">
+            <ul class="navBar__list">
+                <li class="navBar__item"><a class="navBar__link" href="#">Bitácora</a></li>
+                <li class="navBar__item"><a class="navBar__link" href="#">Deudas</a></li>
+                <li class="navBar__item"><a class="navBar__link" href="#">Ahorros</a></li>
+                <li class="navBar__item"><a class="navBar__link" href="#">Presupuesto</a></li>
+                <li class="navBar__item"><a class="navBar__link" href="#">Informes</a></li>
+                <li class="navBar__item"><a class="navBar__link" href="#">Simulador de Gatos</a></li>
+            </ul>
+        </nav>
    </header>
+   
    <main class="main-container">
-       <nav class="navBar">
-           <ul class="navBar__list">
-               <li class="navBar__item"><a class="navBar__link" href="#">Bitácora</a></li>
-               <li class="navBar__item"><a class="navBar__link" href="#">Deudas</a></li>
-               <li class="navBar__item"><a class="navBar__link" href="#">Ahorros</a></li>
-               <li class="navBar__item"><a class="navBar__link" href="#">Presupuesto</a></li>
-               <li class="navBar__item"><a class="navBar__link" href="#">Informes</a></li>
-               <li class="navBar__item"><a class="navBar__link" href="#">Simulador de Gatos</a></li>
-           </ul>
-       </nav>
+        <aside class="aside-container">
+            <form class="formOne" action="">
+                <label class="formOne__label" for="dateEvent">
+                    <span>FECHA</span>
+                    <input class="formOne__inputDate" type="date" name="dateEvent" id="dateEvent">
+                </label>
+
+                <label class="formOne__label" for="selectAcount">
+                    <span>CUENTA</span>
+                    <select class="formOne__select" name="selectAccount" id="selectAccount">
+                        <option value="">INGRESO</option>
+                        <option value="">DEUDAS</option>
+                        <option value="">ALIMENTACIÓN</option>
+                        <option value="">SERVICIOS</option>
+                    </select>
+                </label>
+
+                <label class="formOne__label" for="selectSubAccount">
+                    <span>SUBCUENTA</span>
+                    <select class="formOne__select" name="selectSubAccount" id="selectSubAccount">
+                        <option value="">Agua</option>
+                        <option value="">Luz</option>
+                        <option value="">Gas</option>
+                        <option value="">Mascotas</option>   
+                    </select>                   
+                </label>
+
+                <label class="formOne__label" for="valueEvent">
+                    <span>VALOR</span>
+                    <input class="formOne__inputValue"type="number" name="valueEvent" id="valueEvent">          
+                </label>
+
+                <label class="formOne__label" for="valueEvent">
+                    <span>DESCRIPCIÓN</span>
+                    <input class="formOne__inputValue" type="text" name="descriptionEvent" id="descriptionEvent">          
+                </label>
+
+                <input class="formOne__submit" type="submit">
+
+            </form>
+        </aside>  
+        <article class="article-container">
+            
+           <table class="tableOne">
+               <thead class="tableOne__head">
+                    <th class="tableOne__headField">Fecha</th>
+                    <th class="tableOne__headField">Cuenta</th>
+                    <th class="tableOne__headField">Valor</th>
+                    <th class="tableOne__headField">Descripción</th>
+                    <th class="tableOne__headField">Subcuenta</th>
+               </thead>
+               <tbody class="tableOne__body">
+
+               </tbody>
+           </table>
+                
+
+
+        </article>
    </main>
-   <footer>
+   <footer class="footer-container">
         <h2>Every day counts</h2>
    </footer>   
 </body>
