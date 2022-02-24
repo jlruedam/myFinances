@@ -11,9 +11,9 @@ class subaccount(models.Model):
     ledgerAccount=models.CharField(max_length=50)
 
 class accountingEvent(models.Model):
-    fecha=models.DateTimeField()
-    count=models.CharField(max_length=50)
-    subcount=models.CharField(max_length=50)
-    value=models.FloatField()
-    detail=models.CharField(max_length=150)
+    dateEvent=models.DateTimeField()
+    account=models.CharField(max_length=50)
+    subaccount=models.CharField(max_length=50)
+    valueEvent=models.FloatField()
+    descriptionEvent=models.CharField(max_length=150)
 

@@ -4,4 +4,5 @@ from logBook import views
 
 urlpatterns = [
     path('',views.index, name="index"),
+    path('saveEvent/',views.saveEvent, name="saveEvent")
 ]

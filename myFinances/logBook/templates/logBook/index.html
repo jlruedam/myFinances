@@ -30,7 +30,8 @@
    
    <main class="main-container">
         <aside class="aside-container">
-            <form class="formOne" action="">
+            <form class="formOne" action="/saveEvent/" method="POST">
+                {% csrf_token %}
                 <label class="formOne__label" for="dateEvent">
                     <span>FECHA</span>
                     <input class="formOne__inputDate" type="date" name="dateEvent" id="dateEvent">
@@ -67,7 +68,7 @@
                     <span>DESCRIPCIÓN</span>
                     <input class="formOne__inputValue" type="text" name="descriptionEvent" id="descriptionEvent">          
                 </label>
-                
+
                 <input class="formOne__submit" type="submit">
 
             </form>
@@ -83,6 +84,16 @@
                     <th class="tableOne__headField">Subcuenta</th>
                </thead>
                <tbody class="tableOne__h">
+                   {% for event in dataEvents %}
+                        <tr>
+                            <td>{{event.dateEvent}}</td>
+                            <td>{{event.account}}</td>
+                            <td>{{event.valueEvent}}</td>
+                            <td>{{event.descriptionEvent}}</td>
+                            <td>{{event.subaccount}}</td>
+                        </tr>
+
+                   {% endfor %}
 
                </tbody>
            </table>
