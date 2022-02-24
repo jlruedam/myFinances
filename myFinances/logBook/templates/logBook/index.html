@@ -38,22 +38,24 @@
 
                 <label class="formOne__label" for="selectAcount">
                     <span>CUENTA</span>
-                    <select class="formOne__select" name="selectAccount" id="selectAccount">
-                        <option value="">INGRESO</option>
-                        <option value="">DEUDAS</option>
-                        <option value="">ALIMENTACIÓN</option>
-                        <option value="">SERVICIOS</option>
-                    </select>
+                    <input class="formOne__select" list="accounts" name="selectAccount" id="selectAccount" />
+                    <datalist id="accounts">
+                      <option value="INGRESO">
+                      <option value="DEUDAS">
+                      <option value="ALIMENTACIÓN">
+                      <option value="SERVICIOS">
+                    </datalist>
                 </label>
 
                 <label class="formOne__label" for="selectSubAccount">
                     <span>SUBCUENTA</span>
-                    <select class="formOne__select" name="selectSubAccount" id="selectSubAccount">
-                        <option value="">Agua</option>
-                        <option value="">Luz</option>
-                        <option value="">Gas</option>
-                        <option value="">Mascotas</option>   
-                    </select>                   
+                    <input class="formOne__select" list="subaccounts" name="selectSubAccount" id="selectSubAccount" />
+                    <datalist id="subaccounts">
+                      <option value="Agua">
+                      <option value="Luz">
+                      <option value="Gas">
+                      <option value="Mascotas">
+                    </datalist>            
                 </label>
 
                 <label class="formOne__label" for="valueEvent">
@@ -65,7 +67,7 @@
                     <span>DESCRIPCIÓN</span>
                     <input class="formOne__inputValue" type="text" name="descriptionEvent" id="descriptionEvent">          
                 </label>
-
+                
                 <input class="formOne__submit" type="submit">
 
             </form>
@@ -77,10 +79,10 @@
                     <th class="tableOne__headField">Fecha</th>
                     <th class="tableOne__headField">Cuenta</th>
                     <th class="tableOne__headField">Valor</th>
-                    <th class="tableOne__headField">Descripción</th>
+                    <th class="tableOne__headField">Descrición</th>
                     <th class="tableOne__headField">Subcuenta</th>
                </thead>
-               <tbody class="tableOne__body">
+               <tbody class="tableOne__h">
 
                </tbody>
            </table>
